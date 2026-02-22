@@ -35,7 +35,7 @@ foreach (Node n in path)
     Console.Write(n.Name + " ");
 }
 
-//Result SHOULD be 10
+//Result SHOULD be 10 (decbf)
 
 
 
@@ -178,3 +178,8 @@ public class Graph
 }
 
 
+/* The result was correct, output as:
+dotnet run
+D E C B F 
+Very happy with this result as it is correct
+*/
