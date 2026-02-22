@@ -12,7 +12,6 @@
 
 
 
-
 public class Edge
 {
     public Node Target;
@@ -23,9 +22,6 @@ public class Edge
         Weight = weight;
     }
 }
-
-
-
 
 
 
@@ -50,9 +46,9 @@ public class Graph
     }
 
 
-    private Node GetClosestNode(List<Node> unvisited, Dictionary<Node, double> distances)
+    private Node? GetClosestNode(List<Node> unvisited, Dictionary<Node, double> distances) //?Null allowed because no closest node COULD happen
     {
-        Node closest = null;
+        Node? closest = null; //Question mark makes sure that if Node is null, it isn't set to null which shouldn't happen
         double minDistance = double.PositiveInfinity;
 
         foreach (Node node in unvisited)
@@ -70,7 +66,7 @@ public class Graph
     public List<Node> Dijkstra(Node start, Node end) //Final shortest path between Node start, Node end
     {
         Dictionary<Node, double> distances = new Dictionary<Node, double>(); //This is for the current shortest distance from the starting node
-        Dictionary<Node, Node>  previous = new Dictionary<Node, Node>(); //This is for the previous node in the current shortest path and will then be used for reconstruction of final shortest path
+        Dictionary<Node, Node?>  previous = new Dictionary<Node, Node?>(); //This is for the previous node in the current shortest path and will then be used for reconstruction of final shortest path //? to make it nullable for Djikstra
         List<Node> unvisited = new List<Node>(); //Unvisited set
 
 
@@ -84,42 +80,58 @@ public class Graph
         distances[start] = 0; //First node is 0 distance from itself
 
 
-        while(unvisited.Count > 0)
+        while(unvisited.Count > 0) //While there are still unvisited nodes
         {
-            Node current = GetClosestNode(unvisited, distances);
+            Node? current = GetClosestNode(unvisited, distances); //Greedy principle
 
-            if (current == end)
-                break;
+            if (current == end) //If you have already reached the target then there is no need to continue searching
+//--------------------------------------------------------------------------------------------------
+                break; // I REALISE THIS IS BAD PRACTICE SO SHALL WORK TO REWRITE WITHOUT IT, maybe
+//--------------------------------------------------------------------------------------------------
 
-            unvisited.Remove(current);
+            if (current == null)
+//--------------------------------------------------------------------------------------------------
+                break; // I REALISE THIS IS BAD PRACTICE SO SHALL WORK TO REWRITE WITHOUT IT, maybe
+//--------------------------------------------------------------------------------------------------
 
-            foreach (Edge edge in current.Neighbours)
+            unvisited.Remove(current); //Mark current as visited (actually unmarking as unvisited if you want to get techy sassy with it)
+
+            foreach (Edge edge in current.Neighbours) //Cycle through currently neighbouring nodes
             {
                 Node neighbour = edge.Target;
 
-                if (!unvisited.Contains(neighbour))
-                    continue;
-                
-                double newDistance = distances[current] + edge.Weight;
+                if (!unvisited.Contains(neighbour)) //Omit visited neighbours
+//---------------------------------------------------------------------------------------------------------                
+                    continue; // I REALISE THIS IS BAD PRACTICE SO SHALL WORK TO REWRITE WITHOUT IT, maybe
+//---------------------------------------------------------------------------------------------------------
 
-                if (newDistance < distances[neighbour])
+                double newDistance = distances[current] + edge.Weight; //Node start -> Current -> Neighbour distance
+
+                if (newDistance < distances[neighbour]) //Edge relaxation
                 {
-                    distances[neighbour] = newDistance;
+                    distances[neighbour] = newDistance; //If a shorter route IS found, update values
                     previous[neighbour] = current;
                 }
             }
         }
 
-        List<Node> path = new List<Node>();
-        Node step = end;
 
-        while (step != null)
+
+        List<Node> path = new List<Node>(); //Final path for reconstruction
+
+        if (distances[end] == int.MaxValue) //If the distances are still PositiveInfinity then there is no path between the start and end nodes, therefore nothing can be returned
+        {
+            return path; //Return the path empty before the reconstruction can attempt to occur
+        }
+
+        Node? step = end; //? nullability
+        while (step != null) //Path reconstruction (backwards because we worked the other way figuring out distances)
         {
             path.Insert(0, step);
             step = previous[step];
         }
 
-        return path;
+        return path; //Bingo bango bongo, bish bash bosh
     }
 }
 
