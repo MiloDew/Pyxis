@@ -135,26 +135,30 @@ public class Graph
 //--------------------------------------------------------------------------------------------------
                 break; // I REALISE THIS IS BAD PRACTICE SO SHALL WORK TO REWRITE WITHOUT IT, maybe
 //--------------------------------------------------------------------------------------------------
-
-            unvisited.Remove(current); //Mark current as visited (actually unmarking as unvisited if you want to get techy sassy with it)
-
-            foreach (Edge edge in current.Neighbours) //Cycle through currently neighbouring nodes
+            if (current != end)
             {
-                Node neighbour = edge.Target;
-
-                if (!unvisited.Contains(neighbour)) //Omit visited neighbours
-//---------------------------------------------------------------------------------------------------------                
-                    continue; // I REALISE THIS IS BAD PRACTICE SO SHALL WORK TO REWRITE WITHOUT IT, maybe
-//---------------------------------------------------------------------------------------------------------
-
-                double newDistance = distances[current] + edge.Weight; //Node start -> Current -> Neighbour distance
-
-                if (newDistance < distances[neighbour]) //Edge relaxation
+                if (current != null)
                 {
-                    distances[neighbour] = newDistance; //If a shorter route IS found, update values
-                    previous[neighbour] = current;
+                    unvisited.Remove(current);
+
+                    foreach (Edge edge in current.Neighbours)
+                    {
+                        Node neighbour = edge.Target;
+
+                        if (!unvisited.Contains(neighbour))
+                            continue;
+
+                        double newDistance = distances[current] + edge.Weight;
+
+                        if (newDistance < distances[neighbour])
+                        {
+                            distances[neighbour] = newDistance;
+                            previous[neighbour] = current;
+                        }
+                    }
                 }
             }
+
         }
 
 
