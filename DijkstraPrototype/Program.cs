@@ -126,15 +126,6 @@ public class Graph
         {
             Node? current = GetClosestNode(unvisited, distances); //Greedy principle
 
-            if (current == end) //If you have already reached the target then there is no need to continue searching
-//--------------------------------------------------------------------------------------------------
-                break; // I REALISE THIS IS BAD PRACTICE SO SHALL WORK TO REWRITE WITHOUT IT, maybe
-//--------------------------------------------------------------------------------------------------
-
-            if (current == null)
-//--------------------------------------------------------------------------------------------------
-                break; // I REALISE THIS IS BAD PRACTICE SO SHALL WORK TO REWRITE WITHOUT IT, maybe
-//--------------------------------------------------------------------------------------------------
             if (current != end)
             {
                 if (current != null)
