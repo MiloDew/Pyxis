@@ -121,8 +121,9 @@ public class Graph
 
         distances[start] = 0; //First node is 0 distance from itself
 
-
-        while(unvisited.Count > 0) //While there are still unvisited nodes
+        bool endUnreached = true; //This breaks the loop if the end is reached, replacing an if break that was in the loop
+        bool notNull = true; // Same as endUnreached but if node is null which means end is unreachable, also replacing a break statement
+        while((unvisited.Count > 0) && endUnreached && notNull) //While there are still unvisited nodes
         {
             Node? current = GetClosestNode(unvisited, distances); //Greedy principle
 
@@ -148,6 +149,14 @@ public class Graph
                         }
                     }
                 }
+                else
+                {
+                    notNull = false; //Loop break
+                }
+            }
+            else
+            {
+                endUnreached = false; //Loop break
             }
 
         }
