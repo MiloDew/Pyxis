@@ -129,7 +129,7 @@ public class Graph
 
             if (current != end)
             {
-                if (current != null)
+                if (current != null) //If null then the path is unreachable, because there have been no found unvisited nodes. This is because you can't validate the feasability of a path until Dijkstra has been run.
                 {
                     unvisited.Remove(current);
 
