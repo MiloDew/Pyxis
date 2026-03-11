@@ -136,17 +136,17 @@ public class Graph
                     foreach (Edge edge in current.Neighbours)
                     {
                         Node neighbour = edge.Target;
-
-                        if (!unvisited.Contains(neighbour))
-                            continue;
-
-                        double newDistance = distances[current] + edge.Weight;
-
-                        if (newDistance < distances[neighbour])
+                        if (unvisited.Contains(neighbour)) // Replacing continue with if, this makes it so that if something hasn't been checked it'll run but if it hasnt then there is no point
                         {
+                            double newDistance = distances[current] + edge.Weight;
+
+                            if (newDistance < distances[neighbour])
+                            {
                             distances[neighbour] = newDistance;
                             previous[neighbour] = current;
+                            }
                         }
+                       
                     }
                 }
                 else
