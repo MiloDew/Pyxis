@@ -1,0 +1,99 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.1 Chrome/142.0.7444.265 Electron/39.8.0 Safari/537.36" version="29.6.1">
+  <diagram name="Page-1" id="SNcJjkYyp-zMEeoY3WE9">
+    <mxGraphModel dx="946" dy="710" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ScxqAU7frrQr9N_NyM1_-3" edge="1" parent="1" source="ScxqAU7frrQr9N_NyM1_-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="ScxqAU7frrQr9N_NyM1_-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ScxqAU7frrQr9N_NyM1_-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="OpenStreetMap&lt;div&gt;Google Maps&lt;/div&gt;&lt;div&gt;Ordnance Survey&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="250" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ScxqAU7frrQr9N_NyM1_-6" edge="1" parent="1" source="ScxqAU7frrQr9N_NyM1_-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="ScxqAU7frrQr9N_NyM1_-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ScxqAU7frrQr9N_NyM1_-2" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" value="Build weighted&lt;div&gt;graph from maps&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="400" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="ScxqAU7frrQr9N_NyM1_-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="API Calls&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="410" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="ScxqAU7frrQr9N_NyM1_-11" edge="1" parent="1" source="ScxqAU7frrQr9N_NyM1_-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="ScxqAU7frrQr9N_NyM1_-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ScxqAU7frrQr9N_NyM1_-5" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" value="Dijkstras&amp;nbsp;&lt;div&gt;algorithm ran for&lt;/div&gt;&lt;div&gt;each control&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="554" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="ScxqAU7frrQr9N_NyM1_-8" edge="1" parent="1" source="ScxqAU7frrQr9N_NyM1_-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="ScxqAU7frrQr9N_NyM1_-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="510" y="467" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ScxqAU7frrQr9N_NyM1_-15" edge="1" parent="1" source="ScxqAU7frrQr9N_NyM1_-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="ScxqAU7frrQr9N_NyM1_-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ScxqAU7frrQr9N_NyM1_-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Diiber Data&lt;div&gt;Event Table&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="250" y="427" as="geometry" />
+        </mxCell>
+        <mxCell id="ScxqAU7frrQr9N_NyM1_-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Add splits to a time scale for replay" vertex="1">
+          <mxGeometry height="30" width="80" x="390" y="417" as="geometry" />
+        </mxCell>
+        <mxCell id="ScxqAU7frrQr9N_NyM1_-13" edge="1" parent="1" source="ScxqAU7frrQr9N_NyM1_-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="ScxqAU7frrQr9N_NyM1_-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ScxqAU7frrQr9N_NyM1_-10" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" value="Plot shortest&lt;div&gt;path on map&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="540" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="ScxqAU7frrQr9N_NyM1_-27" edge="1" parent="1" source="ScxqAU7frrQr9N_NyM1_-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="ScxqAU7frrQr9N_NyM1_-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ScxqAU7frrQr9N_NyM1_-12" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" value="Replay runners&lt;div&gt;on map and&amp;nbsp;&lt;/div&gt;&lt;div&gt;scaled to times&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="540" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="ScxqAU7frrQr9N_NyM1_-22" edge="1" parent="1" source="ScxqAU7frrQr9N_NyM1_-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=52.5;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="ScxqAU7frrQr9N_NyM1_-23">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="210" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ScxqAU7frrQr9N_NyM1_-14" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="Database" vertex="1">
+          <mxGeometry height="80" width="60" x="280" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="ScxqAU7frrQr9N_NyM1_-20" edge="1" parent="1" source="ScxqAU7frrQr9N_NyM1_-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="ScxqAU7frrQr9N_NyM1_-14">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="80" y="720" />
+              <mxPoint x="80" y="650" />
+              <mxPoint x="165" y="650" />
+              <mxPoint x="165" y="610" />
+            </Array>
+            <mxPoint x="10" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ScxqAU7frrQr9N_NyM1_-24" edge="1" parent="1" source="ScxqAU7frrQr9N_NyM1_-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0.1;exitDx=0;exitDy=0;exitPerimeter=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="130" y="710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ScxqAU7frrQr9N_NyM1_-17" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Actor" vertex="1">
+          <mxGeometry height="60" width="30" x="20" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="ScxqAU7frrQr9N_NyM1_-21" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="SELECT from British Champions WHERE&lt;div&gt;runner = Bob&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="140" x="70" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="ScxqAU7frrQr9N_NyM1_-23" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Return: List of bobs who have run in british champions and their runs" vertex="1">
+          <mxGeometry height="80" width="100" x="130" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="ScxqAU7frrQr9N_NyM1_-29" edge="1" parent="1" source="ScxqAU7frrQr9N_NyM1_-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0.1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="ScxqAU7frrQr9N_NyM1_-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ScxqAU7frrQr9N_NyM1_-25" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Actor" vertex="1">
+          <mxGeometry height="60" width="30" x="710" y="577" as="geometry" />
+        </mxCell>
+        <mxCell id="ScxqAU7frrQr9N_NyM1_-26" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="Runs shown where runners are dots moving accross the map at their relative speed to each other" vertex="1">
+          <mxGeometry height="110" width="110" x="545" y="555" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

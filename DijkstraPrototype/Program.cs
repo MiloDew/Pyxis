@@ -1,6 +1,7 @@
 ﻿//interactive bit
 Graph graph = new Graph();
 
+
 Node A = new Node("A");//Add nodes
 Node B = new Node("B");
 Node C = new Node("C");
@@ -9,6 +10,7 @@ Node E = new Node("E");
 Node F = new Node("F");
 Node G = new Node("G");
 
+
 graph.Nodes.AddRange(new Node[]{A,B,C,D,E,F,G}); //Add nodes to graph
 
 void AddEdge(Node n1, Node n2, double w) //This makes the edges two way as this implementation of Dijkstra does not account for directionality, more on that later ;)
@@ -16,6 +18,7 @@ void AddEdge(Node n1, Node n2, double w) //This makes the edges two way as this 
     n1.Neighbours.Add(new Edge(n2, w));
     n2.Neighbours.Add(new Edge(n1, w));
 }
+
 
 AddEdge(D, E, 2); //Add edges
 AddEdge(D, A, 4);
@@ -29,16 +32,13 @@ AddEdge(C, B, 2);
 AddEdge(G, F, 5);
 AddEdge(B, F, 2);
 
+
 List<Node> path = graph.Dijkstra(D,F);
 foreach (Node n in path)
 {
     Console.Write(n.Name + " ");
 }
-
 //Result SHOULD be 10 (decbf)
-
-
-
 //Classes blah blah blah
 public class Node
 {
@@ -49,9 +49,6 @@ public class Node
         Name = name;
     }
 }
-
-
-
 
 
 public class Edge
@@ -66,9 +63,6 @@ public class Edge
 }
 
 
-
-
-
 public class Graph
 {
 
@@ -80,7 +74,6 @@ public class Graph
     }
 
 
-    
     public void AddEdge(Node from, Node to, double weight)
     {
         from.Neighbours.Add(new Edge(to,weight));
@@ -160,7 +153,6 @@ public class Graph
             }
 
         }
-
 
 
         List<Node> path = new List<Node>(); //Final path for reconstruction
