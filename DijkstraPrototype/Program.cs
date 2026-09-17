@@ -157,7 +157,7 @@ public class Graph
 
         List<Node> path = new List<Node>(); //Final path for reconstruction
 
-        if (distances[end] == int.MaxValue) //If the distances are still PositiveInfinity then there is no path between the start and end nodes, therefore nothing can be returned
+        if (distances[end] == Double.PositiveInfinity) //If the distances are still PositiveInfinity then there is no path between the start and end nodes, therefore nothing can be returned.
         {
             return path; //Return the path empty before the reconstruction can attempt to occur
         }
