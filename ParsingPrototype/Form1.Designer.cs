@@ -42,6 +42,7 @@
             listBoxControls = new ListBox();
             openFileDialogMap = new OpenFileDialog();
             buttonFindRoute = new Button();
+            buttonTest = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBoxMap).BeginInit();
             flowLayoutPanelSetup.SuspendLayout();
             SuspendLayout();
@@ -162,7 +163,7 @@
             // 
             // buttonFindRoute
             // 
-            buttonFindRoute.Location = new Point(74, 760);
+            buttonFindRoute.Location = new Point(176, 449);
             buttonFindRoute.Name = "buttonFindRoute";
             buttonFindRoute.Size = new Size(150, 46);
             buttonFindRoute.TabIndex = 4;
@@ -170,11 +171,22 @@
             buttonFindRoute.UseVisualStyleBackColor = true;
             buttonFindRoute.Click += buttonFindRoute_Click;
             // 
+            // buttonTest
+            // 
+            buttonTest.Location = new Point(1174, 11);
+            buttonTest.Name = "buttonTest";
+            buttonTest.Size = new Size(388, 46);
+            buttonTest.TabIndex = 5;
+            buttonTest.Text = "Mysterious testing button";
+            buttonTest.UseVisualStyleBackColor = true;
+            buttonTest.Click += buttonTest_Click;
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1574, 929);
+            Controls.Add(buttonTest);
             Controls.Add(buttonFindRoute);
             Controls.Add(listBoxControls);
             Controls.Add(labelControls);
@@ -205,5 +217,6 @@
         private ListBox listBoxControls;
         private OpenFileDialog openFileDialogMap;
         private Button buttonFindRoute;
+        private Button buttonTest;
     }
 }

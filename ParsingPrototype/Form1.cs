@@ -197,5 +197,26 @@ namespace ParsingPrototype
             string routeText = string.Join(" -> ", path.Select(n => n.Name));
             MessageBox.Show(routeText, "Route");
         }
+
+        private async void buttonTest_Click(object sender, EventArgs e)
+        {
+            // Ben Nevis summit - UK's highest point (~1345m), an easy sanity check.
+            double testLat = 56.79685;
+            double testLon = -5.00355;
+
+            try
+            {
+                double? elevation = await ElevationClient.GetElevationAsync(testLat, testLon);
+
+                if (elevation.HasValue)
+                    MessageBox.Show($"Elevation: {elevation.Value} m");
+                else
+                    MessageBox.Show("API returned no data for that point.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Request failed: {ex.Message}");
+            }
+        }
     }
 }
